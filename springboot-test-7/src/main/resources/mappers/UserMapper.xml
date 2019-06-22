@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yczuoxin.springboot.test7.mapping.UserMapper">
+    <resultMap id="UserMap" type="com.yczuoxin.springboot.test7.entry.User">
+        <id property="id" column="id" />
+        <result property="name" column="name" />
+        <result property="age" column="age" />
+    </resultMap>
+    <select id="selectById" resultMap="UserMap">
+        select id, name, age from User where id = #{id}
+    </select>
+</mapper>
