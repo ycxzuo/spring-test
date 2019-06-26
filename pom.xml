@@ -7,7 +7,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.1.5.RELEASE</version>
+        <version>2.1.6.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
@@ -24,6 +24,7 @@
         <module>springboot-test-6</module>
         <module>springboot-test-7</module>
         <module>springboot-test-8</module>
+        <module>springboot-test-9</module>
     </modules>
 
     <dependencies>
