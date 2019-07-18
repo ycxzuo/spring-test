@@ -9,6 +9,9 @@ import java.util.Properties;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.Future;
 
+/**
+ * bin/kafka-console-consumer.sh --bootstrap-server IP:9092 --topic test-1 --from-beginning
+ */
 public class KafkaTest {
     public static void main(String[] args) throws ExecutionException, InterruptedException {
         Properties properties = new Properties();
