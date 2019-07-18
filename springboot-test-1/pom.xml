@@ -10,7 +10,7 @@
     <artifactId>springboot-test-1</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>springboot-test-1</name>
-
+    <description>WEB-Request</description>
     <dependencies>
         <!-- 返回XML的支持 -->
         <dependency>

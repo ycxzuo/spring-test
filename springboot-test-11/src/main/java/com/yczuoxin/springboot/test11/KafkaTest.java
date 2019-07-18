@@ -19,7 +19,7 @@ public class KafkaTest {
         properties.put("key.serializer", StringSerializer.class);
         properties.put("value.serializer",StringSerializer.class);
         KafkaProducer<String, String> producer = new KafkaProducer<String, String>(properties);
-        ProducerRecord<String, String> record = new ProducerRecord<>("test-1",0,"message", "test");
+        ProducerRecord<String, String> record = new ProducerRecord<>("test-1",0,"message", "茂茂");
         Future<RecordMetadata> send = producer.send(record);
         RecordMetadata recordMetadata = send.get();
         System.out.println(recordMetadata);

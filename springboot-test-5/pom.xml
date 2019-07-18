@@ -10,7 +10,7 @@
     <artifactId>springboot-test-5</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>springboot-test-5</name>
-    <description>Demo project for Spring Boot</description>
+    <description>Tomcat</description>
 
     <dependencies>
 

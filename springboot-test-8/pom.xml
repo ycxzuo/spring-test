@@ -10,7 +10,7 @@
     <artifactId>springboot-test-8</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>springboot-test-8</name>
-    <description>Demo project for Spring Boot</description>
+    <description>JPA</description>
 
     <dependencies>
         <dependency>

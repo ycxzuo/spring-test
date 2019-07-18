@@ -11,7 +11,7 @@
     <version>0.0.1-SNAPSHOT</version>
     <name>springboot-test-2</name>
     <packaging>war</packaging>
-    <description>Demo project for Spring Boot</description>
+    <description>WEB-Servlet</description>
 
     <dependencies>
 

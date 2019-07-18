@@ -18,7 +18,7 @@
     <artifactId>springboot-jsp-test</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>springboot-jsp-test</name>
-    <description>Demo project for Spring Boot</description>
+    <description>JSP</description>
 
     <dependencies>
         <dependency>

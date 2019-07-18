@@ -10,7 +10,7 @@
     <artifactId>springboot-test-7</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>springboot-test-7</name>
-    <description>Demo project for Spring Boot</description>
+    <description>Mybatis</description>
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>

@@ -10,7 +10,7 @@
     <artifactId>springboot-test-9</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>springboot-test-9</name>
-    <description>Demo project for Spring Boot</description>
+    <description>ElasticSearch</description>
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>

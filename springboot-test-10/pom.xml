@@ -11,7 +11,7 @@
     <artifactId>springboot-test-10</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>springboot-test-10</name>
-    <description>Demo project for Spring Boot</description>
+    <description>Redis</description>
 
     <dependencies>
         <dependency>
