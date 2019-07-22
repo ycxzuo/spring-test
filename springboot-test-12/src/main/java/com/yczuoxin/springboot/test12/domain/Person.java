@@ -1,5 +1,6 @@
 package com.yczuoxin.springboot.test12.domain;
 
+import com.yczuoxin.springboot.test12.domain.validator.PersonNamePrefix;
 import org.springframework.validation.annotation.Validated;
 
 import javax.validation.constraints.Max;
@@ -15,10 +16,11 @@ public class Person implements Serializable {
     private Long id;
 
     @NotEmpty
+    @PersonNamePrefix
     private String name;
 
     @Min(0)
-    @Max(200)
+    @Max(value = 200, message = "{yczuoxin.validation.constraints.Max.message}")
     private Integer age;
 
     public Long getId() {
@@ -43,5 +45,14 @@ public class Person implements Serializable {
 
     public void setAge(Integer age) {
         this.age = age;
+    }
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", age=" + age +
+                '}';
     }
 }
