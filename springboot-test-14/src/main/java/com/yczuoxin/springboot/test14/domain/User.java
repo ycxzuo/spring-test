@@ -2,7 +2,7 @@
 // 此文件是由 JavaTM Architecture for XML Binding (JAXB) 引用实现 v2.2.8-b130911.1802 生成的
 // 请访问 <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
 // 在重新编译源模式时, 对此文件的所有修改都将丢失。
-// 生成时间: 2019.07.25 时间 09:38:29 PM CST 
+// 生成时间: 2019.07.27 时间 09:36:05 AM CST 
 //
 
 
@@ -10,6 +10,7 @@ package com.yczuoxin.springboot.test14.domain;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 
@@ -24,7 +25,7 @@ import javax.xml.bind.annotation.XmlType;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
  *         &lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}long"/>
- *         &lt;element name="name" type="{http://www.w3.org/2001/XMLSchema}long"/>
+ *         &lt;element name="name" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="age" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
@@ -43,7 +44,8 @@ import javax.xml.bind.annotation.XmlType;
 public class User {
 
     protected long id;
-    protected long name;
+    @XmlElement(required = true)
+    protected String name;
     protected Integer age;
 
     /**
@@ -65,16 +67,24 @@ public class User {
     /**
      * 获取name属性的值。
      * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public long getName() {
+    public String getName() {
         return name;
     }
 
     /**
      * 设置name属性的值。
      * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setName(long value) {
+    public void setName(String value) {
         this.name = value;
     }
 
@@ -102,4 +112,12 @@ public class User {
         this.age = value;
     }
 
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", age=" + age +
+                '}';
+    }
 }

@@ -9,7 +9,7 @@
                 命令行 java -Dfile.encoding=UTF-8 -cp "C:\Program Files"\java\jdk1.8.0_191\lib\tools.jar com.sun.tools.internal.xjc.Driver -d src/main/java -p com.yczuoxin.springboot.test14.domain src/main/resources/META-INF/schemas/user.xsd
             -->
             <xs:element name="id" type="xs:long" maxOccurs="1" minOccurs="1" />
-            <xs:element name="name" type="xs:long" maxOccurs="1" minOccurs="1" />
+            <xs:element name="name" type="xs:string" maxOccurs="1" minOccurs="1" />
             <xs:element name="age" type="xs:int" maxOccurs="1" minOccurs="0">
 
             </xs:element>
