@@ -14,9 +14,9 @@ public class UserRepository {
 
     @PostConstruct
     public void init() {
-        User user = createUser(1L, "左昕", 27);
-        User user2 = createUser(2L, "刘德华", null);
-        User user3 = createUser(3L, "黄晓明", null);
+        User user = createUser(1, "左昕", 27);
+        User user2 = createUser(2, "刘德华", null);
+        User user3 = createUser(3, "黄晓明", null);
         userCache.put(1L, user);
         userCache.put(2L, user2);
         userCache.put(3L, user3);

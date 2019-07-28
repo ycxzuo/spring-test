@@ -1,5 +1,6 @@
 package com.yczuoxin.springboot.test14.config;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.ClassPathResource;
@@ -10,23 +11,24 @@ import org.springframework.xml.xsd.SimpleXsdSchema;
 import org.springframework.xml.xsd.XsdSchema;
 
 @Configuration
-public class WebservicesConfiguration extends WsConfigurerAdapter {
+public class WebServicesConfiguration extends WsConfigurerAdapter {
 
     @Bean("user")
-    public Wsdl11Definition userWsdlDefinition(XsdSchema userXsdSchema) {
-        DefaultWsdl11Definition wsdl11Definition = new DefaultWsdl11Definition();
+    @Autowired
+    public Wsdl11Definition userWsdl11Definition(XsdSchema userXsdSchema) {
+        DefaultWsdl11Definition userWsdl11Definition = new DefaultWsdl11Definition();
 
-        wsdl11Definition.setPortTypeName("UserServicePort");
-        wsdl11Definition.setLocationUri("/web-service");
-        wsdl11Definition.setTargetNamespace("http://www.yczuoxin.com/schemas");
-        wsdl11Definition.setSchema(userXsdSchema);
+        userWsdl11Definition.setPortTypeName("UserServicePort");
+        userWsdl11Definition.setLocationUri("/web-services");
+        userWsdl11Definition.setTargetNamespace("http://www.yczuoxin.com/schemas");
+        userWsdl11Definition.setSchema(userXsdSchema);
 
-        return wsdl11Definition;
+        return userWsdl11Definition;
     }
+
 
     @Bean
     public XsdSchema userXsdSchema() {
         return new SimpleXsdSchema(new ClassPathResource("META-INF/schemas/user.xsd"));
     }
-
 }

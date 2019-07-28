@@ -10,20 +10,24 @@ import java.time.Instant;
 
 public class WebservicesClient {
     public static void main(String[] args) {
-        WebServiceTemplate template = new WebServiceTemplate();
-        Jaxb2Marshaller marshaller = new Jaxb2Marshaller();
 
-        marshaller.setClassesToBeBound(User.class, UserIdRequest.class, UserResponse.class);
+        WebServiceTemplate webServiceTemplate = new WebServiceTemplate();
 
-        template.setMarshaller(marshaller);
-        template.setUnmarshaller(marshaller);
+        Jaxb2Marshaller jaxb2Marshaller = new Jaxb2Marshaller();
 
-        UserIdRequest request = new UserIdRequest();
-        request.setUserId(1L);
-        request.setTimestamp(Instant.now().toEpochMilli());
+        jaxb2Marshaller.setClassesToBeBound(UserIdRequest.class, UserResponse.class, User.class);
 
-        UserResponse result = (UserResponse)template.marshalSendAndReceive("http://localhost:8080/services/web-service/user", request);
-        System.out.println(result.getUser());
-        System.out.println(result.getTimestamp());
+        webServiceTemplate.setMarshaller(jaxb2Marshaller);
+        webServiceTemplate.setUnmarshaller(jaxb2Marshaller);
+
+        UserIdRequest userIdRequest = new UserIdRequest();
+        userIdRequest.setUserId(1L);
+        userIdRequest.setTimestamp(Instant.now().toEpochMilli());
+
+        UserResponse userResponse = (UserResponse) webServiceTemplate.marshalSendAndReceive("http://localhost:8080/services/web-service/user", userIdRequest);
+
+        System.out.println(userResponse.getUser());
+
     }
+
 }
