@@ -20,7 +20,7 @@ public class UserServiceEndpoint {
     @Autowired
     private UserRepository userRepository;
 
-    @PayloadRoot(namespace = "http://www.yczuoxin.com/schemas", localPart = "UserResponse")
+    @PayloadRoot(namespace = "http://www.yczuoxin.com/schemas", localPart = "userIdRequest")
     @ResponsePayload
     public UserResponse getUser(@RequestPayload UserIdRequest userIdRequest) {
         long userId = userIdRequest.getUserId();

@@ -22,7 +22,7 @@ public class WebservicesClient {
         request.setUserId(1L);
         request.setTimestamp(Instant.now().toEpochMilli());
 
-        UserResponse result = (UserResponse)template.marshalSendAndReceive("http://localhost:8080/serivces/web-service/user", request);
+        UserResponse result = (UserResponse)template.marshalSendAndReceive("http://localhost:8080/services/web-service/user", request);
         System.out.println(result.getUser());
         System.out.println(result.getTimestamp());
     }
