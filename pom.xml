@@ -29,6 +29,7 @@
         <module>springboot-test-12</module>
         <module>springboot-test-13</module>
         <module>springboot-test-14</module>
+        <module>springboot-test-15</module>
     </modules>
 
     <dependencies>
