@@ -42,6 +42,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         http.headers().xssProtection().block(false);
 
         http.authorizeRequests()
+            // 不设置的话，会读取不了文件
             .antMatchers("/css/**", "/js/**","/img/**", "**/favicon.ico", "/index").permitAll()
             .anyRequest().fullyAuthenticated()
             .and().formLogin().loginPage("/login").failureForwardUrl("/error").permitAll()
@@ -50,6 +51,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+        // 注意，spring 5.0 之后需要定义加密方式，如果没有，默认 password 为 null
         auth.inMemoryAuthentication().passwordEncoder(new BCryptPasswordEncoder())
             .withUser("zuoxin").password(new BCryptPasswordEncoder().encode("123")).roles("ADMIN")
             .and().withUser("admin").password(new BCryptPasswordEncoder().encode("123")).roles("USER");
