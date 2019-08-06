@@ -22,12 +22,14 @@ public class SpringbootTest5Application {
     }
 
     public static void customize(TomcatServletWebServerFactory factory){
+
+
+        // 修改定制化 tomcat 中的 connector，此方法会导致 factory.setPort(8888) 失效
+        factory.addConnectorCustomizers(SpringbootTest5Application::customize);
+
         factory.setPort(8888);
         factory.setProtocol(Http11Nio2Protocol.class.getName());
         factory.setContextPath("");
-
-        // 修改定制化 tomcat 中的 connector
-        factory.addConnectorCustomizers(SpringbootTest5Application::customize);
 
         // 新增定制化 tomcat 中的 connector
         Connector connector = new Connector();
