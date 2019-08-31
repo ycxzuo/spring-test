@@ -30,6 +30,7 @@
         <module>springboot-test-13</module>
         <module>springboot-test-14</module>
         <module>springboot-test-15</module>
+        <module>springboot-test-16</module>
     </modules>
 
     <dependencies>
