@@ -63,10 +63,8 @@ public class SimpleData extends NotificationBroadcasterSupport implements Simple
     public boolean isNotificationEnabled(Notification notification) {
         // 只关心 AttributeChangeNotification 通知，并且仅限于字段为 data
         if (AttributeChangeNotification.class.isAssignableFrom(notification.getClass())) {
-            AttributeChangeNotification attributeChangeNotification = AttributeChangeNotification.class.cast(notification);
-            if ("data".equals(attributeChangeNotification.getAttributeName())) {
-                return true;
-            }
+            AttributeChangeNotification attributeChangeNotification = (AttributeChangeNotification) notification;
+            return "data".equals(attributeChangeNotification.getAttributeName());
         }
         return false;
     }
