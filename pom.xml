@@ -32,6 +32,7 @@
         <module>springboot-test-15</module>
         <module>springboot-test-16</module>
         <module>springboot-test-17</module>
+        <module>springboot-test-18</module>
     </modules>
 
     <dependencies>
