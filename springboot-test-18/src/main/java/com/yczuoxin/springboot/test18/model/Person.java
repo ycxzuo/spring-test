@@ -2,7 +2,6 @@ package com.yczuoxin.springboot.test18.model;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
-@ConfigurationProperties("person")
 public class Person {
 
     private Long id;

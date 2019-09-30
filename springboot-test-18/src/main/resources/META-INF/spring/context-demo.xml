@@ -6,7 +6,7 @@
 
     <bean id="person" class="com.yczuoxin.springboot.test18.model.Person">
         <property name="id" value="1" />
-        <property name="name" value="zuoxin" />
+        <property name="name" value="xietingfeng" />
         <property name="age" value="26" />
     </bean>
 </beans>
