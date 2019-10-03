@@ -4,9 +4,9 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         https://www.springframework.org/schema/beans/spring-beans.xsd" profile="prod">
 
-    <bean id="person" class="com.yczuoxin.springboot.test18.model.Person">
+    <bean id="zhouxingchi" class="com.yczuoxin.springboot.test18.model.Person">
         <property name="id" value="3" />
-        <property name="name" value="hxb" />
+        <property name="name" value="zhouxingchi" />
         <property name="age" value="18" />
     </bean>
 </beans>

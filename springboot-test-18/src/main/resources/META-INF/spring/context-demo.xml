@@ -4,7 +4,7 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         https://www.springframework.org/schema/beans/spring-beans.xsd" profile="test">
 
-    <bean id="person" class="com.yczuoxin.springboot.test18.model.Person">
+    <bean id="xietingfeng" class="com.yczuoxin.springboot.test18.model.Person">
         <property name="id" value="1" />
         <property name="name" value="xietingfeng" />
         <property name="age" value="26" />

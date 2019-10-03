@@ -21,7 +21,7 @@ public class SpringbootTest18Application implements EnvironmentAware {
     public static void main(String[] args) {
         SpringApplication application = new SpringApplication(SpringbootTest18Application.class);
         application.setAdditionalProfiles("prod");
-        application.run();
+        application.run(args);
     }
 
     @Override
