@@ -1,0 +1,3 @@
+### ×Ô¶¨Òå Spring Boot Application
+org.springframework.context.ApplicationListener=\
+com.yczuoxin.springboot.test18.context.ComsumizedApplication
