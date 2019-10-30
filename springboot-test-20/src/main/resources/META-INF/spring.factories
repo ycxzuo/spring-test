@@ -1,0 +1,2 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+com.yczuoxin.springboot.test20.autoconfig.Person2AutoConfiguration
